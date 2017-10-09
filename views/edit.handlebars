@@ -1,0 +1,34 @@
+<form method="get" action="/logout">
+	<button id="log" class="headerbt">Log Out</button>
+</form>  
+<h1>Edit your profile</h1>
+<form id="user" method="post" action="/profile/edit">
+	<div id="edit">
+		<div id="maininfo">
+			<h3>First Name</h3>
+			<input class="importand" type="text" name="first_name" value="{{first_name}}">
+			<h3>Last Name</h3>
+			<input class="importand" type="text" name="last_name" value="{{last_name}}">
+			<h3>Email Adress</h3>
+			<input class="importand" type="text" name="email" value="{{email}}">
+			<h3>Password</h3>
+			<input class="importand" type="password" name="password">
+		</div>
+		<div id="profileinfo">
+			<h3>Age</h3>
+			<input name="age" value="{{age}}">
+			<h3>City</h3>
+			<input type="text" name="city" value="{{city}}">
+			<h3>Homepage</h3>
+			<input type="text" name="homepage" value="{{'homepage'}}">
+		</div>
+		<input type="hidden" name="_csrf" value="{{csrfToken}}">
+	</div>
+	<button class="sign">CONTINUE</button>
+	{{#if error}}
+		<p>Something is wrong with your input! Please try again.</p>
+	{{/if}}
+	{{#if empty}}<p id="pempty">Please, fill all red spots in.</p>{{/if}}
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/public/search_for_empty.js"></script>

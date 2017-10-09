@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="/public/home.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Chewy|Economica:700|Hammersmith+One|Jura" rel="stylesheet">
+    	<title>Petition</title>
+    </head>
+    <body>
+        <div id="header">
+        	<form method="get" action="/home">
+				<button class="headerbt">Homepage</button>
+			</form>
+			<form method="get" action="/petition">
+				<button class="headerbt">Petition</button>
+			</form>
+			<form method="get" action="/profile/edit">
+				<button class="headerbt">Profile</button>
+			</form>     	
+        </div>
+        <div id="body">
+        	<img id="cover" src="/public/images/background.jpg">
+            {{{body}}}  
+        </div>
+        
+        <div id="footer">
+            <p>© 2017 Wladislaw Sugak</p>
+        </div>
+    </body>
+</html>

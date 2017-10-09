@@ -1,0 +1,17 @@
+<form method="get" action="/logout">
+	<button id="log" class="headerbt">Log Out</button>
+</form>  
+<h1>{{city}}'s people agree with you.</h1>
+<ul>
+	{{#each results}}
+		<li>{{#if this.homepage}}
+			<a href="{{this.homepage}}">{{this.first_name}} {{this.last_name}}</a> 
+		{{else}}
+			{{this.first_name}} {{this.last_name}}
+		{{/if}}
+		{{#if this.age}}
+			({{this.age}})
+		{{/if}}</li>
+	{{/each}}
+</ul>
+

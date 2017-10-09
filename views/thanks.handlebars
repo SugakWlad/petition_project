@@ -1,0 +1,28 @@
+{{#if sure}}
+	<div id="sure">
+		<h1>Are you sure you want to DELETE you signature?</h1>
+		<h2>This is an irretrievable action. You will not be able to restore your signature!</h2>
+		<div id="sigbutns">
+			<form method="get" action="/petition/thanks">
+				<button id="return" class="sigbutn">RETURN</button>
+			</form>
+			<form method="get" action="/petition/delete">
+				<button id="del" class="sigbutn">DELETE</button>
+			</form>
+		</div>
+	</div>
+{{else}}
+	<form method="get" action="/logout">
+		<button id="log" class="headerbt">Log Out</button>
+	</form>  
+	<h1 id="cong">Congratulations!</h1>
+	<h1>It was the last petition in your entire life.</h1>
+	<img id="signature" src="{{img}}">
+	<h1>Now you can do something else.</h1>
+	<div id="afterthanks">
+		<a href="/petition/signers">See all {{signers}} signers</a>
+		<a href="/profile/edit">Edit your profile</a>
+		<a href="/petition/thanks/sure">Delete your signature</a>
+	</div>
+	
+{{/if}}

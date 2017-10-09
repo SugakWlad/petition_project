@@ -1,0 +1,15 @@
+<form method="get" action="/logout">
+	<button id="log" class="headerbt">Log Out</button>
+</form>  
+<h1>If you still hate signing, sign here...</h1>
+{{#if error}}<p>Looks like you did something wrong. Please try again.</p>{{/if}}
+<form id="form" method="post" action="/petition">
+	<input id="siginput" type="hidden" name="signature">
+	<div>
+		<canvas id="canv" height='350px' width='800px'></canvas>
+	</div>
+	<input type="hidden" name="_csrf" value="{{csrfToken}}">
+	<button class="sign">Submit</button>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/public/signature.js"></script>

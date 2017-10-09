@@ -1,0 +1,21 @@
+ 
+<h1>If you really want to be heard, register now or newer come back!</h1>
+<form id="registerform" method="post" action="/registration">
+	<div class="regdiv">
+		<h3>First Name</h3>
+		<input class="importand" type="text" name="first_name" value="{{first_name}}">
+		<h3>Last Name</h3>
+		<input class="importand" type="text" name="last_name" value="{{last_name}}">
+		<h3>Email Adress</h3>
+		<input class="importand" type="email" name="email" value="{{email}}">
+		<h3>Password</h3>
+		<input class="importand" type="password" name="password">
+		{{#if error}}<p>Something is wrong with your input! Please try again.</p>{{/if}}
+		{{#if empty}}<p id="pempty">Please, fill all red spots in.</p>{{/if}}
+		<button class="sign">SIGN UP</button>
+		<input type="hidden" name="_csrf" value="{{csrfToken}}">
+	</div>
+</form>
+<p id="iflogin">If you already have an account, please <a href="/login">LOG IN</a></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/public/search_for_empty.js"></script>
