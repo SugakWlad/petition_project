@@ -1,13 +1,13 @@
 Petition Project
 =========================
 
-Petition is my first "big" project where I implemented all my knowlenge in FullStack web development like **JS**, **nodeJS**, **CSS**, **HTML**, **PostgreSQL**, **Redis** and **DOM** so I think this is the most important part of my education becouse I understood how technologies work together.
+Petition is my first "big" project where I used all my knowlenge in FullStack web development like **JS**, **nodeJS**, **CSS**, **HTML**, **PostgreSQL**, **Redis** and **DOM** so I think this is the most important part of my education because I understood how technologies work together.
 
 * This is a web site where you can sign the petition against petitions.
 
 ![Homepage](https://github.com/SugakWlad/petition_project/blob/master/screenshots/homepage.png)
 
-* After registration user can sign the petition
+* After registration user can sign the petition (it works through **Canvas** element and "mousemoove" event)
 
 ![signature](https://github.com/SugakWlad/petition_project/blob/master/screenshots/signature.png)
 
